@@ -16,6 +16,11 @@ public class App {
 
     public void main() throws Exception {
         //Start up a jetty and do something with it
+        ServerConnector http = new ServerConnector(server);
+        http.setHost("localhost");
+        http.setIdleTimeout(30000);
+        
+        server.addConnector(http);
         server.start();
     }
 
