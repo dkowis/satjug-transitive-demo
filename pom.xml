@@ -123,6 +123,24 @@
                             </rules>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>enforce-banned-dependencies</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                    <excludes>
+                                        <exclude>commons-logging:commons-logging</exclude>
+                                    </excludes>
+                                    <searchTransitive>true</searchTransitive>
+                                </bannedDependencies>
+                            </rules>
+                            <!-- fail fast makes it bomb after the first failure -->
+                            <failFast>true</failFast>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
 
