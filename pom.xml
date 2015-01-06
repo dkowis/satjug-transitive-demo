@@ -60,6 +60,12 @@
             <artifactId>fluent-hc</artifactId>
             <version>4.3.6</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>
