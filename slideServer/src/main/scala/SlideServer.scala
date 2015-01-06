@@ -8,7 +8,8 @@ object SlideServer extends App {
 
   val jetty = new Server()
   val http = new ServerConnector(jetty)
-  //http.setHost("localhost")
+  http.setHost("localhost")
+  http.setPort(9876)
   http.setIdleTimeout(30000)
 
   val handler = new ResourceHandler()

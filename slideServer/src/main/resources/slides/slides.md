@@ -8,10 +8,11 @@ class: center, middle
 # Agenda
 
 1. Dependency Hell!
-2. A bit of history
-3.
+2. Why should I bother?
+3. The maven build plugins
+3. The Code
 
 ---
 
-# Introduction
+# Dependency Hell
 
