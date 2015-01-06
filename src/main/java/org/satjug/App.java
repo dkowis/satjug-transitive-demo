@@ -19,7 +19,7 @@ public class App {
         ServerConnector http = new ServerConnector(server);
         http.setHost("localhost");
         http.setIdleTimeout(30000);
-        
+
         server.addConnector(http);
         server.start();
     }
