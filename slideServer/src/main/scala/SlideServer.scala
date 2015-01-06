@@ -15,7 +15,7 @@ object SlideServer extends App {
   val handler = new ResourceHandler()
   handler.setDirectoriesListed(false)
   handler.setWelcomeFiles(List("index.html").toArray)
-  handler.setBaseResource(Resource.newClassPathResource("/slides"))
+  handler.setBaseResource(Resource.newClassPathResource("/reveal"))
 
   val handlerList = new HandlerList()
   handlerList.setHandlers(List(handler, new DefaultHandler()).toArray)
