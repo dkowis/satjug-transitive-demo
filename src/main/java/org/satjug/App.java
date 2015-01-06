@@ -4,7 +4,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         new App().main();
     }
 
@@ -13,8 +13,9 @@ public class App {
         server = new Server();
     }
 
-    public void main() {
+    public void main() throws Exception {
         //Start up a jetty and do something with it
+        server.start();
     }
 
     public int getPort() {
