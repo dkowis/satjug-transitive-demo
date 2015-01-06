@@ -33,7 +33,7 @@ public class App {
         ResourceHandler resourceHandler = new ResourceHandler();
         resourceHandler.setDirectoriesListed(false);
         resourceHandler.setWelcomeFiles(new String[]{"index.html"});
-        resourceHandler.setBaseResource(Resource.newClassPathResource("/"));
+        resourceHandler.setBaseResource(Resource.newClassPathResource("/serverBase/"));
 
         HandlerList handlers = new HandlerList();
         handlers.setHandlers(new Handler[]{resourceHandler, new DefaultHandler()});

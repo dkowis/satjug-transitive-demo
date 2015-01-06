@@ -41,7 +41,7 @@ class JettyTest extends FunSpec with Matchers {
 
     val port = app.getPort
 
-    val content = Request.Get(s"http://localhost:$port/hello.txt").execute().returnContent().asString
+    val content = Request.Get(s"http://localhost:$port/helo.txt").execute().returnContent().asString
 
     content should be("Hello World")
   }
