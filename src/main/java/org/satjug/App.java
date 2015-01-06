@@ -9,6 +9,7 @@ public class App {
     }
 
     final Server server;
+
     public App() {
         server = new Server();
     }
@@ -18,7 +19,16 @@ public class App {
         server.start();
     }
 
+    public boolean isUp() {
+        return server.isStarted();
+    }
+
     public int getPort() {
-        return ((ServerConnector)server.getConnectors()[0]).getLocalPort();
+        return ((ServerConnector) server.getConnectors()[0]).getLocalPort();
+    }
+
+    public void shutdown() throws Exception {
+        server.stop();
+        server.join();
     }
 }
