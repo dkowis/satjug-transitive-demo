@@ -46,5 +46,4 @@ class JettyTest extends FunSpec with Matchers {
     content should be("Hello World")
   }
 
-
 }
