@@ -7,8 +7,13 @@ import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.util.resource.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class App {
+
+    private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
     public static void main(String[] args) throws Exception {
         new App().main();
     }
@@ -36,6 +41,7 @@ public class App {
 
         server.addConnector(http);
         server.start();
+        LOG.info("Server is a go!");
     }
 
     public boolean isUp() {
